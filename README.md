@@ -11,7 +11,8 @@ The writers-readers problem is an synchronization problem.We have learned about 
     -> read_cnt = 0
     -> wrt_cnt  = 0
 ## Wait_and_signal_declarations
-``` cpp WAIT(Semaphore *S){
+``` cpp
+WAIT(Semaphore *S){
                      S->value--;
                       if(S->value<0)
                                      { add this process P to Combined_Queue;
