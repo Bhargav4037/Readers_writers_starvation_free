@@ -45,3 +45,29 @@ if(wrt_cnt == 0) signal(s3);
 
 signal(s1);
 ```
+## Pseudo-code_for_readers
+``` cpp
+    wait(s3);
+
+read_cnt++;
+
+if (read_cnt == 1) wait(s1);
+
+signal(mutex);
+
+signal(s3);
+
+    ........
+
+//reading is performed
+
+    ........
+
+wait(mutex);
+
+read_cnt--;
+
+if (read_cnt == 0) signal(s1);
+
+signal(mutex);
+```
