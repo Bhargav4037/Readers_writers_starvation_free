@@ -23,3 +23,5 @@ The writers-readers problem is an synchronization problem.We have learned about 
                      S->value++;
                  }
 ```
+# Solution_of_starvation_free
+We are implementing it using two queues,one for writers and other for readers if readers queue is empty then we add write process to writers queue and vice versa.This resolves the problem of the starvation as we are considering all readers coming at a time as one unit and executing at a time and then writers so no one starves.Hence the problem of starvation is resolved.
