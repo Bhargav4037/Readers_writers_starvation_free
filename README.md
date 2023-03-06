@@ -12,14 +12,14 @@ The writers-readers problem is an synchronization problem.We have learned about 
     -> wrt_cnt  = 0
 ## Wait_and_signal_declarations
 ``` cpp
-WAIT(S){
+    WAIT(S){
                       while(S->value<=0){
                            ; //no-operation
                       }
                        S->value--;
                  }
                                              
- SIGNAL(S){
+     SIGNAL(S){
                      S->value++;
-}
+                 }
 ```
