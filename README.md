@@ -25,4 +25,5 @@ The writers-readers problem is an synchronization problem.We have learned about 
                       if(S->value<0)
                                      { Remove a process P to Combined_Queue;
                                              wake up(P);}
-} ```
+}
+```
