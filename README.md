@@ -12,19 +12,14 @@ The writers-readers problem is an synchronization problem.We have learned about 
     -> wrt_cnt  = 0
 ## Wait_and_signal_declarations
 ``` cpp
-WAIT(Semaphore *S){
-                     S->value--;
-                      if(S->value<0)
-                                     { add this process P to Combined_Queue;
-                                             block();}
+WAIT(S){
+                      while(S->value<=0){
+                           ; //no-operation
+                      }
+                       S->value--;
                  }
-                                    
-                   
-
- SIGNAL(Semaphore *S){
+                                             
+ SIGNAL(S){
                      S->value++;
-                      if(S->value<0)
-                                     { Remove a process P to Combined_Queue;
-                                             wake up(P);}
 }
 ```
